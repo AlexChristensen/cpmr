@@ -1,0 +1,17 @@
+citHeader("To cite cpmr in publications use:")
+
+bibentry(
+	bibtype = "article",
+	key	= "christensen2021cpmr",
+	title	= "{cpmr}: Connectome-based Predictive Modeling in {R}",
+	author	= c(person("Christensen,", "P", "Alexander"), person("Wahlheim,", "N", "Christopher")),
+	journal = "CRAN",
+        pages	= "",
+	year	= "2021",
+	doi 	= "",
+
+  textVersion  =
+  paste0("Christensen, A. P., & Wahlheim, C. N. (2021). ",
+        "cpmr: Connectome-based predictive modeling in R. ",
+	"")
+)
