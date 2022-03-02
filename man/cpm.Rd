@@ -79,7 +79,7 @@ Set to \code{FALSE} for no progress bar}
 
 \item{plots}{Should plots be plotted?
 Defaults to \code{TRUE}.
-Set to \code{FALSE} to hide plots}
+Set to \code{FALSE} to hide}
 
 \item{train_na}{Training dataset
 (an array from \code{\link[NetworkToolbox]{convertConnBrainMat}} function)}
