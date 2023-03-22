@@ -1,7 +1,7 @@
 Package: cpmr
 Title: Connectome-based Predictive Modeling
 Version: 0.0.1
-Date: 2021-11-13
+Date: 2023-03-22
 Authors@R: c(person("Alexander", "Christensen", email = "alexpaulchristensen@gmail.com", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-9798-7037")), person("Christopher", "Wahlheim", role = c("aut"), comment = c(ORCID = "0000-0002-2381-1493"))) 
 Maintainer: Alexander Christensen <alexpaulchristensen@gmail.com>
 Description: Implements Connectome-based Predictive Modeling (CPM; Shen, Finn, Scheinost, Rosenberg, Chun, Papademetris, & Constable, 2017 <doi:10.1038/nprot.2016.178>) for cross-sectional and time series neuroimaging data in R. Methods include distance correlation (Yoo, Rosenberg, Noble, Scheinost, Constable, & Chun, 2019 <doi:10.1016/j.neuroimage.2019.04.060>), import tools for CONN connectivity matrices, and a suite of CPM functions.
