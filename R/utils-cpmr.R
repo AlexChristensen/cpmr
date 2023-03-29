@@ -54,9 +54,8 @@ cpmIV.separate <- function(neuralarray, bstat, kfolds, covar, thresh = .01,
     kfolds <- no_sub
   }
   
-  #initialize positive and negative behavior stats
-  behav_pred_pos<-matrix(0,nrow=no_sub,ncol=1)
-  behav_pred_neg<-matrix(0,nrow=no_sub,ncol=1)
+  # Initialize positive and negative behavior stats
+  behav_pred_pos <- behav_pred_neg <- matrix(0, nrow = no_sub, ncol = 1)
   
   if(is.list(covar))
   {
@@ -64,9 +63,8 @@ cpmIV.separate <- function(neuralarray, bstat, kfolds, covar, thresh = .01,
     cvars<-scale(cvars)
   }
   
-  pos_array <- array(0,dim=c(nrow=no_node,ncol=no_node,no_sub))
-  neg_array <- array(0,dim=c(nrow=no_node,ncol=no_node,no_sub))
-  
+  # Initialize positive and negative connectivity matrices for each participant
+  pos_array <- neg_array <- array(0, dim = c(nrow = no_node, ncol = no_node,no_sub))  
   
   #k-folds
   ##kfold breaks
@@ -113,8 +111,7 @@ cpmIV.separate <- function(neuralarray, bstat, kfolds, covar, thresh = .01,
     if(nrow(train_vcts)!=(no_train))
     {train_vcts<-t(train_vcts)}
     
-    rmat<-vector(mode="numeric",length=ncol(train_vcts))
-    pmat<-vector(mode="numeric",length=ncol(train_vcts))
+    rmat <- pmat <- vector(mode="numeric",length=ncol(train_vcts))
     
     if(is.list(covar))
     {
