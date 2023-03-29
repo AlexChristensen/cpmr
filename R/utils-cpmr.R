@@ -41,6 +41,7 @@ cpmIV.separate <- function(neuralarray, bstat, kfolds, covar, thresh = .01,
                            standardize = FALSE, cores, progBar = TRUE,
                            plots = TRUE)
 {
+  
   bstat<-as.vector(bstat)
   if(standardize)
   {bstat<-scale(bstat)}
@@ -57,10 +58,10 @@ cpmIV.separate <- function(neuralarray, bstat, kfolds, covar, thresh = .01,
   # Initialize positive and negative behavior stats
   behav_pred_pos <- behav_pred_neg <- matrix(0, nrow = no_sub, ncol = 1)
   
-  if(is.list(covar))
-  {
-    cvars<-do.call(cbind,covar,1)
-    cvars<-scale(cvars)
+  # Check if covariates exist, if they do,
+  # then convert them to a matrix and standardize them
+  if(is.list(covar)){
+    cvars <- scale(do.call(cbind, covar, 1))
   }
   
   # Initialize positive and negative connectivity matrices for each participant
